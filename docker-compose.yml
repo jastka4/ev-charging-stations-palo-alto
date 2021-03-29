@@ -12,9 +12,28 @@ services:
       - ./init:/docker-entrypoint-initdb.d
     ports:
       - 3306:3306
+    networks:
+      - api-network
   # used to preview data stored in the database
   adminer:
     image: adminer
     restart: always
     ports:
       - 8080:8080
+  python-api:
+    build: ./python-api
+    environment:
+      INIT_DB_LOAD: 'True'
+      FLASK_ENV: development
+      SQLALCHEMY_DATABASE_URI: mariadb+mariadbconnector://user:password@database:3306/database
+    volumes:
+      - ./python-api/:/app/
+    ports:
+      - 5000:80
+    networks:
+      - api-network
+    depends_on:
+      - database
+networks:
+  api-network:
+    driver: bridge
