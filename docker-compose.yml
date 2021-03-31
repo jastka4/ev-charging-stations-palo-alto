@@ -22,6 +22,7 @@ services:
       - 8080:8080
   python-api:
     build: ./python-api
+    restart: always
     environment:
       INIT_DB_LOAD: 'True'
       FLASK_ENV: development
@@ -29,11 +30,23 @@ services:
     volumes:
       - ./python-api/:/app/
     ports:
-      - 5000:80
+      - 8081:80
     networks:
       - api-network
     depends_on:
       - database
+  java-api:
+    build: ./java-api
+    restart: always
+    environment:
+      resource.url: http://python-api:80
+    depends_on:
+      - database
+      - python-api
+    ports:
+      - 8082:8080
+    networks:
+      - api-network
 networks:
   api-network:
     driver: bridge
