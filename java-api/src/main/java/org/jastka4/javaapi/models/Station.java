@@ -4,8 +4,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class Station {
+public class Station implements Serializable {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private Address address;

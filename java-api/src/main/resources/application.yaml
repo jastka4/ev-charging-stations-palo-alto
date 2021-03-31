@@ -1,11 +1,13 @@
 jwt:
   secret: mysecret
 resource:
-  url: http://localhost:8081
+  base-url: http://localhost:8081
 spring:
   cache:
     cache-names:
       - buckets
+      - energy
+      - event
     caffeine:
       spec: maximumSize=1000000,expireAfterAccess=3600s
 bucket4j:
@@ -23,7 +25,7 @@ bucket4j:
       filter-method: servlet
       url: /authenticate
       rate-limits:
-        - execute-condition:  "!@authenticationService.isLogged()"
+        - execute-condition: "!@authenticationService.isLogged()"
           expression: "getRemoteAddr()"
           bandwidths:
             - capacity: 10

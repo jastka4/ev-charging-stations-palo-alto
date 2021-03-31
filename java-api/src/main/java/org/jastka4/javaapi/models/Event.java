@@ -5,11 +5,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 @Data
-public class Event {
+public class Event implements Serializable {
 
     @DateTimeFormat(iso = DateTimeFormat.ISO.TIME)
     @JsonProperty("charging_time")

@@ -3,8 +3,10 @@ package org.jastka4.javaapi.models;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class Address {
+public class Address implements Serializable {
 
     private String address;
 
