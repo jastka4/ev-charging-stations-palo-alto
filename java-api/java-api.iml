@@ -122,7 +122,19 @@
     <orderEntry type="library" name="Maven: javax.xml.bind:jaxb-api:2.4.0-b180830.0359" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:javax.activation-api:1.2.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.18.18" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.13.2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:2.2" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-cache:2.4.4" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context-support:5.3.5" level="project" />
+    <orderEntry type="library" name="Maven: com.github.ben-manes.caffeine:caffeine:2.8.8" level="project" />
+    <orderEntry type="library" name="Maven: org.checkerframework:checker-qual:3.8.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.errorprone:error_prone_annotations:2.4.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.cache:cache-api:1.1.0" level="project" />
+    <orderEntry type="library" name="Maven: com.github.ben-manes.caffeine:jcache:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe:config:1.4.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" name="Maven: org.osgi:org.osgi.service.component.annotations:1.4.0" level="project" />
+    <orderEntry type="library" name="Maven: com.giffing.bucket4j.spring.boot.starter:bucket4j-spring-boot-starter:0.2.0" level="project" />
+    <orderEntry type="library" name="Maven: com.giffing.bucket4j.spring.boot.starter:bucket4j-spring-boot-starter-context:0.2.0" level="project" />
+    <orderEntry type="library" name="Maven: com.github.vladimir-bukhtoyarov:bucket4j-core:4.0.0" level="project" />
+    <orderEntry type="library" name="Maven: com.github.vladimir-bukhtoyarov:bucket4j-jcache:4.0.0" level="project" />
   </component>
 </module>
