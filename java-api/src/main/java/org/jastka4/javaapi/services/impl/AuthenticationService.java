@@ -1,4 +1,4 @@
-package org.jastka4.javaapi.services;
+package org.jastka4.javaapi.services.impl;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

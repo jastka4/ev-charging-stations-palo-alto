@@ -3,7 +3,7 @@ package org.jastka4.javaapi.config;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureException;
-import org.jastka4.javaapi.services.JwtUserDetailsService;
+import org.jastka4.javaapi.services.impl.JwtUserDetailsService;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;

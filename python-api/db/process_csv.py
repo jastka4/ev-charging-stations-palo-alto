@@ -6,6 +6,15 @@ import pandas as pd
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 
 
+def should_init(db):
+    is_empty_address = db.session.execute("SELECT * FROM address").first() is None
+    is_empty_event = db.session.execute("SELECT * FROM event").first() is None
+    is_empty_port = db.session.execute("SELECT * FROM port").first() is None
+    is_empty_station = db.session.execute("SELECT * FROM station").first() is None
+
+    return is_empty_address and is_empty_event and is_empty_port and is_empty_station
+
+
 def parse_date(x):
     return datetime.strptime(x, '%m/%d/%Y %H:%M')
 

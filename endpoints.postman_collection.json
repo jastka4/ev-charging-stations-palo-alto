@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "5ad0b80b-246f-484e-8d0e-0b1a48a77f61",
+		"name": "Intel APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"jwtuser\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/authenticate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/energy/consumption?start=2012-09-09&end=2012-09-30",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqd3R1c2VyIiwiZXhwIjoxNjE3MjI5MzAwLCJpYXQiOjE2MTcyMTEzMDB9.n72du6KpWVSZCle-Eno9taFDAAED2EbyJOVnXPp9WI7oXy_93wLUE0q2ndEGrzFlnplEyu_Np0RhJgbV_YFVOA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/energy/consumption?start=2012-09-09&end=2012-09-30",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"energy",
+						"consumption"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2012-09-09"
+						},
+						{
+							"key": "end",
+							"value": "2012-09-30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/event/consumption?user=3513&start=4&end=6",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqd3R1c2VyIiwiZXhwIjoxNjE3MjMwNDA0LCJpYXQiOjE2MTcyMTI0MDR9.x_aJXM9JhWpFwn9UkN8GXGYaRjqnLIXdNDXudy3EIXYCF6Yh7qUHAftcV2EY9krsb7Ah-cZddmDlvQ7svWci6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/event/consumption?user=3513&start=4&end=6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"event",
+						"consumption"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "3513"
+						},
+						{
+							"key": "start",
+							"value": "4"
+						},
+						{
+							"key": "end",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/event?number=10&station=PALO%20ALTO%20CA%20%2F%20HIGH%20%234",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqd3R1c2VyIiwiZXhwIjoxNjE3MjMwNDA0LCJpYXQiOjE2MTcyMTI0MDR9.x_aJXM9JhWpFwn9UkN8GXGYaRjqnLIXdNDXudy3EIXYCF6Yh7qUHAftcV2EY9krsb7Ah-cZddmDlvQ7svWci6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/event?number=10&station=PALO%20ALTO%20CA%20%2F%20HIGH%20%234",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"event"
+					],
+					"query": [
+						{
+							"key": "number",
+							"value": "10"
+						},
+						{
+							"key": "station",
+							"value": "PALO%20ALTO%20CA%20%2F%20HIGH%20%234"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/event",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqd3R1c2VyIiwiZXhwIjoxNjE3MjMwNDA0LCJpYXQiOjE2MTcyMTI0MDR9.x_aJXM9JhWpFwn9UkN8GXGYaRjqnLIXdNDXudy3EIXYCF6Yh7qUHAftcV2EY9krsb7Ah-cZddmDlvQ7svWci6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"currency\": \"USD\",\n    \"energy\": 10.786432266235352,\n    \"fee\": 0.0,\n    \"port_number\": \"2\",\n    \"station_name\": \"PALO ALTO CA / HIGH #4\",\n    \"charging_time\": \"02:53:53\",\n    \"driver_postal_code\": \"94061\",\n    \"end_date\": \"2011-09-04T20:37:00\",\n    \"end_time_zone\": \"PDT\",\n    \"ended_by\": \"Customer\",\n    \"gasoline_savings\": 1.3539999723434448,\n    \"ghg_savings\": 4.53000020980835,\n    \"plug_in_event_id\": 41224124,\n    \"start_date\": \"2011-09-04T17:43:00\",\n    \"start_time_zone\": \"PDT\",\n    \"total_duration\": \"02:54:05\",\n    \"transaction_date\": \"2011-09-04T20:37:00\",\n    \"user_id\": 4033\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/event",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"event"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/energy/consumption-details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqd3R1c2VyIiwiZXhwIjoxNjE3MjMwNDA0LCJpYXQiOjE2MTcyMTI0MDR9.x_aJXM9JhWpFwn9UkN8GXGYaRjqnLIXdNDXudy3EIXYCF6Yh7qUHAftcV2EY9krsb7Ah-cZddmDlvQ7svWci6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/energy/consumption-details",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"energy",
+						"consumption-details"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqd3R1c2VyIiwiZXhwIjoxNjE3MjMwNDA0LCJpYXQiOjE2MTcyMTI0MDR9.x_aJXM9JhWpFwn9UkN8GXGYaRjqnLIXdNDXudy3EIXYCF6Yh7qUHAftcV2EY9krsb7Ah-cZddmDlvQ7svWci6g",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

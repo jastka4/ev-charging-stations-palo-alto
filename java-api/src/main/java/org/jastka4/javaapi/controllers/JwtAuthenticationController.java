@@ -3,7 +3,7 @@ package org.jastka4.javaapi.controllers;
 import org.jastka4.javaapi.config.JwtTokenUtil;
 import org.jastka4.javaapi.models.JwtRequest;
 import org.jastka4.javaapi.models.JwtResponse;
-import org.jastka4.javaapi.services.JwtUserDetailsService;
+import org.jastka4.javaapi.services.impl.JwtUserDetailsService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
