@@ -31,16 +31,16 @@ def add_event():
     new_event.port_number = port_number
 
     if Station.query.filter(Station.station_name == station_name).first() is None:
-        return 'Station does not exist!'
+        return 'Station does not exist!', 400
     if Port.query.filter(Port.port_number == port_number, Port.station_name == station_name).first() is None:
-        return 'Port does not exist!'
+        return 'Port does not exist!', 400
 
     event_result = Event.query \
         .filter(Event.plug_in_event_id == request.json['plug_in_event_id'],
                 Event.station_name == station_name) \
         .first()
     if event_result is not None:
-        return 'Event already exists!'
+        return 'Event already exists!', 400
     else:
         database.session.add(new_event)
         database.session.commit()
@@ -69,7 +69,7 @@ def get_energy_consumption():
         .query(database.func.sum(Event.energy), database.func.avg(Event.energy)) \
         .one_or_none()
 
-    return jsonify(sum=result[0], avg=result[1])
+    return jsonify(sum=round(result[0], 3), avg=round(result[1], 3))
 
 
 @app.route('/energy/consumption', methods=['GET'])

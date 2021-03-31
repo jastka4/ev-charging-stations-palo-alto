@@ -1,0 +1,58 @@
+### Retrieve and save the authorization token.
+POST localhost:8080/authenticate
+Content-Type: application/json
+
+{
+  "username": "jwtuser",
+  "password": "password"
+}
+
+> {% client.global.set("auth_token", response.body.token); %}
+
+###
+GET localhost:8080/energy/consumption-details
+Authorization: Bearer {{auth_token}}
+Accept: application/json
+
+###
+GET localhost:8080/energy/consumption?start=2012-09-09&end=2012-09-30
+Authorization: Bearer {{auth_token}}
+Accept: application/json
+
+###
+GET localhost:8080/event/consumption?user=3513&start=4&end=6
+Authorization: Bearer {{auth_token}}
+Accept: application/json
+
+###
+GET localhost:8080/event?number=10&station=PALO%20ALTO%20CA%20%2F%20HIGH%20%234
+Authorization: Bearer {{auth_token}}
+Accept: application/json
+
+###
+POST localhost:8080/event
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+
+{
+  "currency": "USD",
+  "energy": 10.786432266235352,
+  "fee": 0.0,
+  "port_number": "2",
+  "station_name": "PALO ALTO CA / HIGH #4",
+  "charging_time": "02:53:53",
+  "driver_postal_code": "94061",
+  "end_date": "2011-09-04T20:37:00",
+  "end_time_zone": "PDT",
+  "ended_by": "Customer",
+  "gasoline_savings": 1.3539999723434448,
+  "ghg_savings": 4.53000020980835,
+  "plug_in_event_id": 412242124,
+  "start_date": "2011-09-04T17:43:00",
+  "start_time_zone": "PDT",
+  "total_duration": "02:54:05",
+  "transaction_date": "2011-09-04T20:37:00",
+  "user_id": 4033
+}
+
+###
